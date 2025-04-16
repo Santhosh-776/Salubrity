@@ -24,7 +24,7 @@ const Features = () => {
                                 />
                             </svg>
                         </div>
-                        <h3 className="text-xl font-semibold mb-2">
+                        <h3 className="text-xl font-semibold mb-2 text-purple-600">
                             Curated Meditation Music
                         </h3>
                         <p className="text-gray-600">
@@ -48,7 +48,7 @@ const Features = () => {
                                 />
                             </svg>
                         </div>
-                        <h3 className="text-xl font-semibold mb-2">
+                        <h3 className="text-xl font-semibold mb-2 text-purple-600">
                             Guided Meditation Videos
                         </h3>
                         <p className="text-gray-600">
@@ -72,7 +72,7 @@ const Features = () => {
                                 />
                             </svg>
                         </div>
-                        <h3 className="text-xl font-semibold mb-2">
+                        <h3 className="text-xl font-semibold mb-2 text-purple-600">
                             Personalized Experience
                         </h3>
                         <p className="text-gray-600">

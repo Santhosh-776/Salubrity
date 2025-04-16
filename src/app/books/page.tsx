@@ -1,14 +1,18 @@
 "use client";
 
-import BookList from "../components/BookList";
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 export default function BooksPage() {
+    const router = useRouter();
+
+    useEffect(() => {
+        router.push("/books/local");
+    }, [router]);
+
     return (
-        <div className="container mx-auto px-4 py-8">
-            <h1 className="text-3xl font-bold mb-8 text-center">
-                Wellness & Meditation Books
-            </h1>
-            <BookList />
+        <div className="flex justify-center items-center min-h-screen">
+            <div className="animate-spin h-10 w-10 border-4 border-purple-500 rounded-full border-t-transparent"></div>
         </div>
     );
 }

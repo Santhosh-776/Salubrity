@@ -1,23 +1,42 @@
 const videoData = [
-    {
-      id: 1,
-      title: "Natural Calm Forest Waterfall Music Meditation",
-      thumbnail: "https://tse3.mm.bing.net/th?id=OIP.NF2aA7rD_lK7HGKsnvJulgHaEo&pid=Api",
-      url: "https://www.youtube.com/watch?v=c2NmyoXBXmE",
-    },
-    {
-      id: 2,
-      title: "Tranquility - Deep Healing Relaxing Music",
-      thumbnail: "https://tse2.mm.bing.net/th?id=OIP.IVekPS3Qv9Yr6B5kJIrG3AHaEK&pid=Api",
-      url: "https://www.youtube.com/watch?v=lxrk91ITBp4",
-    },
-    {
-      id: 3,
-      title: "Space Ambient Music - Cosmic Relaxation",
-      thumbnail: "https://tse1.mm.bing.net/th?id=OIP.y2NDY2GLH9V6x1ipye59fwHaEK&pid=Api",
-      url: "https://www.youtube.com/watch?v=-YUYLbjl7Sk",
-    },
-  ];
-  
-  export default videoData;
+  {
+    id: 1,
+    title: "Discipline Is Power.",
+    thumbnail: "https://img.youtube.com/vi/AbtpZvC8aT4/hqdefault.jpg",
+    url: "/videos/video1.mp4",
+  },
+  {
+    id: 2,
+    title: "The next outbreak? We're not ready | Bill Gates | TED",
+    thumbnail: "https://img.youtube.com/vi/6Af6b_wyiwI/hqdefault.jpg",
+    url: "/videos/video2.mp4",
+  },
+  {
+    id: 3,
+    title: "The 5 AM Club - Animated Book Summary",
+    thumbnail: "https://img.youtube.com/vi/Scwsg9Ai3rg/hqdefault.jpg",
+    url: "/videos/video4.mp4",
+  },
+  {
+    id: 4,
+    title: "The Myth of Self Improvement",
+    thumbnail: "https://img.youtube.com/vi/5CfnQT81kN0/hqdefault.jpg",
+    url: "/videos/video3.mp4",
+  },
+  {
+    id: 5,
+    title: "How to Stop Being Lazy and Get Things Done",
+    thumbnail: "https://img.youtube.com/vi/HPETcaQ3Z2o/hqdefault.jpg",
+    url: "/videos/video5.mp4",
+  },
+  {
+    id: 6,
+    title: "% Reasons why Health is wealth",
+    thumbnail: "https://img.youtube.com/vi/HF-JRsy2tSo/hqdefault.jpg",
+    url: "/videos/video6.mp4",
+  },
+];
+
+export default videoData;
+
   

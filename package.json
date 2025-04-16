@@ -12,11 +12,13 @@
     "@react-pdf-viewer/core": "^3.12.0",
     "@react-pdf-viewer/default-layout": "^3.12.0",
     "@react-pdf/renderer": "^4.3.0",
+    "lucide-react": "^0.488.0",
     "next": "15.2.4",
+    "pdfjs-dist": "^3.4.120",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-pdf": "^9.2.1",
-    "react-player": "^2.16.0"
+    "react-player": "^2.16.0",
+    "worker-loader": "^3.0.8"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
