@@ -1,4 +1,5 @@
 import React from "react";
+import WhyThisApp from "./WhyThisApp";
 
 const Features = () => {
     return (
@@ -81,6 +82,8 @@ const Features = () => {
                         </p>
                     </div>
                 </div>
+
+                <WhyThisApp />
             </div>
         </div>
     );
