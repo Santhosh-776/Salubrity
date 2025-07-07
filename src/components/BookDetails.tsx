@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 interface BookDetailsProps {
     title: string;
@@ -21,7 +22,9 @@ const BookDetails = ({
         <div className="flex flex-col md:flex-row gap-8">
             <div className="md:w-1/3">
                 <div className="aspect-[2/3] overflow-hidden rounded-xl shadow-lg">
-                    <img
+                    <Image
+                        width={300}
+                        height={400}
                         src={coverImage}
                         alt={`${title} cover`}
                         className="w-full h-full object-cover"

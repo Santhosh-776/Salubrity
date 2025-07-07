@@ -77,7 +77,7 @@ export default function VideosPage() {
                         <p className="text-xl text-purple-800">
                             No videos found matching{" "}
                             <span className="font-semibold gradient-text">
-                                "{searchQuery}"
+                                {searchQuery}
                             </span>
                         </p>
                         <p className="mt-2 text-purple-600">

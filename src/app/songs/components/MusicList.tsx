@@ -81,7 +81,7 @@ export default function MusicList() {
                     <p className="text-xl text-purple-800">
                         No sounds found matching{" "}
                         <span className="font-semibold gradient-text">
-                            "{searchQuery}"
+                            {searchQuery}
                         </span>
                     </p>
                     <p className="mt-2 text-purple-600">

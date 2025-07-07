@@ -3,8 +3,8 @@
 import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 import { Video } from "./VideoPlayer";
+import Image from "next/image";
 
-// Import ReactPlayer dynamically with SSR disabled
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 interface VideoPlayerLayoutProps {
@@ -20,11 +20,9 @@ const VideoPlayerLayout = ({
         videos.find((v) => v.id === initialVideoId) || videos[0]
     );
     const [isPlaying, setIsPlaying] = useState(false);
-    const [showControls, setShowControls] = useState(false);
     const [isMounted, setIsMounted] = useState(false);
 
     useEffect(() => {
-        // Set mounted state to true when component mounts on client
         setIsMounted(true);
     }, []);
 
@@ -37,7 +35,6 @@ const VideoPlayerLayout = ({
     const handleVideoSelect = (video: Video) => {
         setActiveVideo(video);
         setIsPlaying(true);
-        // Scroll to top on mobile when selecting a new video
         if (typeof window !== "undefined" && window.innerWidth < 768) {
             window.scrollTo({ top: 0, behavior: "smooth" });
         }
@@ -61,7 +58,6 @@ const VideoPlayerLayout = ({
                                     onPause={() => setIsPlaying(false)}
                                     onEnded={() => {
                                         setIsPlaying(false);
-                                        // Auto play next video option could be added here
                                     }}
                                     config={{
                                         file: {
@@ -74,7 +70,6 @@ const VideoPlayerLayout = ({
                                     }}
                                 />
                             ) : (
-                                // Show placeholder until client-side renders
                                 <div className="w-full h-full bg-gray-100 flex items-center justify-center">
                                     <div className="animate-pulse flex flex-col items-center">
                                         <div className="w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center">
@@ -148,7 +143,9 @@ const VideoPlayerLayout = ({
                                         : "hover:bg-purple-50"
                                 }`}>
                                 <div className="relative w-40 min-w-32 h-22 rounded-md overflow-hidden">
-                                    <img
+                                    <Image
+                                        width={160}
+                                        height={90}
                                         src={video.image}
                                         alt={video.title || `Video thumbnail`}
                                         className="w-full h-full object-cover"

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 interface BookReaderProps {
     pdfUrl: string;
@@ -18,7 +19,9 @@ const BookReader = ({ pdfUrl, title, author, coverImage }: BookReaderProps) => {
                 <div
                     className="relative cursor-pointer"
                     onClick={() => setIsReading(true)}>
-                    <img
+                    <Image
+                        width={300}
+                        height={400}
                         src={coverImage}
                         alt={title}
                         className="w-full h-96 object-cover"

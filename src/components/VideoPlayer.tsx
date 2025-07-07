@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import ReactPlayer from "react-player";
+import Image from "next/image";
 
 export interface Video {
     id: number;
@@ -60,7 +61,9 @@ const VideoPlayer = ({ video }: VideoPlayerProps) => {
                     <div
                         className="relative cursor-pointer overflow-hidden"
                         onClick={() => setIsPlaying(true)}>
-                        <img
+                        <Image
+                            width={640}
+                            height={360}
                             src={video.image}
                             alt={video.title || `Video by ${video.user.name}`}
                             className="w-full aspect-video object-cover transform group-hover:scale-110 transition-transform duration-700"

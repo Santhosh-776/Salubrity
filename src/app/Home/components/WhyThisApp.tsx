@@ -4,7 +4,6 @@ const WhyThisApp = () => {
     return (
         <div className="mt-16">
             <div className="bg-white rounded-xl overflow-hidden shadow-lg">
-                {/* Header section */}
                 <div className="p-6 bg-gradient-to-r from-purple-700 to-purple-500">
                     <div className="flex items-center">
                         <span className="text-white">
@@ -36,7 +35,6 @@ const WhyThisApp = () => {
                     </p>
                 </div>
 
-                {/* Binaural Beats Section */}
                 <div className="p-6 border-b">
                     <div className="flex items-center">
                         <span className="text-purple-600">
@@ -67,7 +65,7 @@ const WhyThisApp = () => {
                             Binaural beats are an auditory illusion created when
                             two slightly different frequencies are played
                             separately in each ear. Your brain perceives a third
-                            "beat" which is the mathematical difference between
+                            beat which is the mathematical difference between
                             these two frequencies. For example, if a 200 Hz tone
                             is played in one ear and a 210 Hz tone in the other,
                             the brain perceives a 10 Hz binaural beat.
@@ -80,7 +78,7 @@ const WhyThisApp = () => {
                         </h5>
                         <p className="mt-2 text-gray-700 leading-relaxed">
                             Binaural beats are believed to work through a
-                            process called "frequency following response," where
+                            process called frequency following response, where
                             your brainwaves synchronize with the frequency of
                             the perceived beat. Different frequency ranges are
                             associated with different mental states:
@@ -131,7 +129,6 @@ const WhyThisApp = () => {
                     </div>
                 </div>
 
-                {/* Subliminal Audio Section */}
                 <div className="p-6 border-b">
                     <div className="flex items-center">
                         <span className="text-purple-600">
@@ -181,7 +178,6 @@ const WhyThisApp = () => {
                     </div>
                 </div>
 
-                {/* Research Section */}
                 <div className="p-6 border-b">
                     <div className="flex items-center">
                         <span className="text-purple-600">
@@ -238,7 +234,6 @@ const WhyThisApp = () => {
                     </div>
                 </div>
 
-                {/* Tips Section */}
                 <div className="p-6">
                     <div className="flex items-center">
                         <span className="text-purple-600">

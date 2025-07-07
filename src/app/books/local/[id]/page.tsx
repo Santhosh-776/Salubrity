@@ -1,10 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import localBooksData, { LocalBook } from "@/utils/data/localBooksData";
 import PDFViewer from "@/components/PDFViewer";
 import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function LocalBookPage() {
     const params = useParams();
@@ -20,17 +21,14 @@ export default function LocalBookPage() {
         );
 
         if (currentBookIndex !== -1) {
-            // Set current book
             setBook(localBooksData[currentBookIndex]);
 
-            // Set previous book
             if (currentBookIndex > 0) {
                 setPrevBookId(localBooksData[currentBookIndex - 1].id);
             } else {
                 setPrevBookId(null);
             }
 
-            // Set next book
             if (currentBookIndex < localBooksData.length - 1) {
                 setNextBookId(localBooksData[currentBookIndex + 1].id);
             } else {
@@ -39,11 +37,10 @@ export default function LocalBookPage() {
         }
     }, [id]);
 
-    const navigateToBook = (bookId: string) => {
+    const navigateToBook = useCallback((bookId: string) => {
         router.push(`/books/local/${bookId}`);
-    };
+    }, [router]);
 
-    // Add keyboard navigation
     useEffect(() => {
         const handleKeyPress = (e: KeyboardEvent) => {
             if (e.key === "ArrowLeft" && prevBookId) {
@@ -55,7 +52,7 @@ export default function LocalBookPage() {
 
         window.addEventListener("keydown", handleKeyPress);
         return () => window.removeEventListener("keydown", handleKeyPress);
-    }, [prevBookId, nextBookId]);
+    }, [navigateToBook, prevBookId, nextBookId]);
 
     if (!book) {
         return (
@@ -149,7 +146,9 @@ export default function LocalBookPage() {
                 <div className="flex flex-col md:flex-row gap-6">
                     <div className="md:w-1/3 lg:w-1/4">
                         <div className="bg-white rounded-lg overflow-hidden shadow-md">
-                            <img
+                            <Image
+                                width={300}
+                                height={400}
                                 src={book.coverImage}
                                 alt={`${book.title} cover`}
                                 className="w-full h-64 object-cover"

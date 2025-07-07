@@ -14,7 +14,6 @@ export default function MusicPlayer({
     currentSong,
     onNext,
     onPrevious,
-    onClose,
 }: MusicPlayerProps) {
     const [isPlaying, setIsPlaying] = useState(false);
     const [currentTime, setCurrentTime] = useState(0);

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import localBooksData from "@/utils/data/localBooksData";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function LocalBooksPage() {
     const [searchTerm, setSearchTerm] = useState("");
@@ -61,7 +62,9 @@ export default function LocalBooksPage() {
                             className="block">
                             <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
                                 <div className="h-48 bg-gray-200">
-                                    <img
+                                    <Image
+                                        width={300}
+                                        height={400}
                                         src={book.coverImage}
                                         alt={book.title}
                                         className="w-full h-full object-cover"
